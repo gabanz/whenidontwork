@@ -1,0 +1,14 @@
+{
+    "private": true,
+    "name": "whenidontwork",
+    "version": "1.0.0",
+    "description": "Day off calendar from wheniwork ical",
+    "main": "index.js",
+    "author": "Faiz Azhar <faiz@cloudflare.com>",
+    "license": "MIT",
+    "dependencies": {
+        "fs": "0.0.1-security",
+        "ical.js": "^1.4.0",
+        "node-fetch": "^2.6.0"
+    }
+}
