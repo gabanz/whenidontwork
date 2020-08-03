@@ -1,7 +1,7 @@
 # When I Don't Work
 
 Cloudflare Workers script that creates a new icalendar which only contains
-the day offs from the WhenIWork shift calendar
+the day offs from the WhenIWork shift calendar.
 
 ## Getting Started
 
@@ -19,8 +19,16 @@ wrangler publish
 
 ### Develop
 
-Execute `index-node.js` with Node.js
+Clone the repository and install dependencies in the `node_module` folder using npm.
 
 ```
-node index-node.js
+npm i
+```
+
+Choose whether you want to read the locally saved icalendar file (e.g `./sample.ics`) or to fetch the file from the remote URL and comment/uncomment out the related code blocks.
+
+Run `index-node.js` with Node.js
+
+```
+node index-node.js > output.ics
 ```

@@ -11,19 +11,19 @@ const fs = require("fs")
 
 //define which calendar to read from
 //const url = "https://app.wheniwork.com/calendar/8a7310d798b4fa056cb8800bc26938ba4db78510.ics" //faiz calendar
-//const url = "https://app.wheniwork.com/calendar/8a7310d798b4fa056cb8800bc26938ba4db78510/global.ics" //team calendar
+const url = "https://app.wheniwork.com/calendar/8a7310d798b4fa056cb8800bc26938ba4db78510/global.ics" //team calendar
 
-//uncomment if reading from the URL
-//const fetch = require("node-fetch")
+//comment out if reading from the local file system instead of remote URL
+const fetch = require("node-fetch")
 
 const request = async () => {
 
-  //uncomment if reading from the URL
-  //const response = await fetch(url)
-  //let text = await response.text()
+  //comment out if reading from the local file system instead of remote URL
+  const response = await fetch(url)
+  let text = await response.text()
 
-  //read the text from local ics file
-  const text = fs.readFileSync("./sample.ics").toString('utf-8')
+  //uncomment if reading the text from local ics file
+  //const text = fs.readFileSync("./sample.ics").toString('utf-8')
   
   //parse the text as json
   const jcalData = ICAL.parse(text)

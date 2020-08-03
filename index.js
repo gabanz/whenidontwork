@@ -11,6 +11,15 @@ const ICAL = require('ical.js')
 //const url = "https://app.wheniwork.com/calendar/8a7310d798b4fa056cb8800bc26938ba4db78510.ics" //faiz calendar
 const url = "https://app.wheniwork.com/calendar/8a7310d798b4fa056cb8800bc26938ba4db78510/global.ics" //team calendar
 
+/* TODO: conditional routing logic to return URLs. based on query string?
+switch (user) {
+ case "faiz":
+   return faizUrl
+ default:
+   return teamUrl
+}
+*/
+
 addEventListener('fetch', event => {
   return event.respondWith(eventHandler())
 })
