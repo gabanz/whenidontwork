@@ -16,15 +16,19 @@ addEventListener('fetch', event => {
 })
 
 async function eventHandler() {
-  const response = await fetch(url)
-  const results = await gatherResponse(response)
-  return new Response(results)
+  const data = await fetch(url)
+  let response = await gatherResponse(data)
+  response = new Response(response)
+  response.headers.set('cache-control', 'no-store, no-cache, must-revalidate')
+  response.headers.set('content-type', 'text/calendar; charset=UTF-8')
+  response.headers.set('content-disposition', 'inline')
+  return response
 }
 
-async function gatherResponse(response) {
+async function gatherResponse(data) {
   
   //reads the icalendar URL as text
-  const text = await response.text()
+  const text = await data.text()
 
   //parse the text as json
   const jcalData = ICAL.parse(text)
