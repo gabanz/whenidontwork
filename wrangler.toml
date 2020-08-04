@@ -1,5 +1,6 @@
 name = "whenidontwork"
 type = "webpack"
-account_id = ""
-route = ""
-zone_id = ""
+account_id = "CLOUDFLARE_ACCOUNT_ID"
+route = "WORKERS_ROUTE"
+zone_id = "CLOUDFLARE_ZONE_ID"
+vars = {URL = "SOURCE_ICALENDAR_URL"}

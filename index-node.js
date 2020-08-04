@@ -9,9 +9,8 @@
 const ICAL = require('ical.js')
 const fs = require("fs")
 
-//define which calendar to read from
-//const url = "https://app.wheniwork.com/calendar/8a7310d798b4fa056cb8800bc26938ba4db78510.ics" //faiz calendar
-const url = "https://app.wheniwork.com/calendar/8a7310d798b4fa056cb8800bc26938ba4db78510/global.ics" //team calendar
+//define the icalendar URL to read from
+const url = "SOURCE_URL"
 
 //comment out if reading from the local file system instead of remote URL
 const fetch = require("node-fetch")

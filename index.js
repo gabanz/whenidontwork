@@ -7,9 +7,8 @@
 //load the ical.js library
 const ICAL = require('ical.js')
 
-//define which calendar to read from
-//const url = "https://app.wheniwork.com/calendar/8a7310d798b4fa056cb8800bc26938ba4db78510.ics" //faiz calendar
-const url = "https://app.wheniwork.com/calendar/8a7310d798b4fa056cb8800bc26938ba4db78510/global.ics" //team calendar
+//read calendar URL from environment variable
+const url = URL
 
 /* TODO: conditional routing logic to return URLs. based on query string?
 switch (user) {
