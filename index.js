@@ -85,6 +85,9 @@ async function gatherResponse(data) {
       }
       newevent.startDate = ICAL.Time.fromData(date)
 
+      //add out-of-office busy status
+      newvevent.updatePropertyWithValue('x-microsoft-cdo-busystatus', 'OOF')
+
       //add the new vevent as subcomponents to the new vcalendar
       newvcal.addSubcomponent(newvevent)
     }
