@@ -9,6 +9,6 @@
     "dependencies": {
         "fs": "0.0.1-security",
         "ical.js": "^1.4.0",
-        "node-fetch": "^2.6.1"
+        "node-fetch": "^2.6.7"
     }
 }
